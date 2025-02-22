@@ -1,169 +1,43 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile - CryptoInvest</title>
+    <title>Crypto Investment - Profile</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('https://i.postimg.cc/L51fdrz6/wp13108709.jpg') no-repeat center center fixed;
-            background-size: cover;
-            filter: brightness(70%);
-            color: #fff;
-            text-align: center;
-        }
-        .profile-container {
-            width: 90%;
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        .profile-container h2 {
-            margin-bottom: 10px;
-        }
-        .profile-info p {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .buttons button {
-            background: #f39c12;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-            transition: 0.3s;
-        }
-        .buttons button:hover {
-            background: #e67e22;
-        }
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: -250px;
-            width: 250px;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            padding-top: 20px;
-            transition: 0.3s;
-        }
-        .sidebar a {
-            display: block;
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-        }
-        .sidebar a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        .menu-icon {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        .progress-bar-container {
-            width: 80%;
-            background: rgba(255, 255, 255, 0.2);
-            height: 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-            position: relative;
-        }
-        .progress-bar {
-            width: 50%;
-            height: 100%;
-            background: #f39c12;
-            border-radius: 10px;
-        }
-        .progress-markers {
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            top: 25px;
-            left: 0;
-            right: 0;
-            font-size: 14px;
-        }
-    </style>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="menu-icon" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
+    <div class="profile-container">
+        <header>
+            <h1>Crypto Investment</h1>
+            <p><strong>Username:</strong> <span id="username">obidivine</span></p>
+            <p><strong>Account Balance:</strong> <span id="balance">2.5 BTC</span></p>
+            <div class="btc-address">
+                <p><strong>Bitcoin Address:</strong> <span id="btc-address">1A2BC4d5E6F...</span></p>
+                <button id="copy-btn">Copy</button>
+            </div>
+        </header>
+        
+        <div class="buttons">
+            <button class="btn dashboard">
+                <img src="https://i.postimg.cc/XNmgGfLd/images-2.png" alt="Dashboard Icon">
+                Dashboard
+            </button>
+            <button class="btn fund-account">
+                <img src="https://i.postimg.cc/kXSvx2YZ/images-3.png" alt="Fund Account Icon">
+                Fund Account
+            </button>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 20%;"></div>
+            </div>
+            <div class="progress-labels">
+                <span>1×</span><span>2×</span><span>4×</span><span>6×</span><span>8×</span><span>10×</span>
+            </div>
+        </div>
     </div>
-    <div class="sidebar" id="sidebar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Fund Account</a>
-        <a href="#">How It Works</a>
-        <a href="#">Logout</a>
-    </div><div class="profile-container">
-    <h2>Crypto Investment</h2>
-    <div class="profile-info">
-        <p><strong>Username:</strong> <span id="user-name"></span></p>
-        <p><strong>Account Balance:</strong> <span id="user-balance">2.5 BTC</span></p>
-        <p><strong>Bitcoin Address:</strong> <span id="btc-address">1A2b3C4d5E6F...</span> <button onclick="copyAddress()">Copy</button></p>
-    </div>
-    <div class="buttons">
-        <button onclick="location.href='dashboard.html'"><img src="https://i.postimg.cc/XNmgGfLd/images-2.png" width="20"> Dashboard</button>
-        <button onclick="location.href='fund.html'"><img src="https://i.postimg.cc/kXSvx2YZ/images-3.png" width="20"> Fund Account</button>
-    </div>
-</div>
-
-<div class="progress-bar-container">
-    <div class="progress-bar"></div>
-    <div class="progress-markers">
-        <span>1×</span>
-        <span>2×</span>
-        <span>4×</span>
-        <span>6×</span>
-        <span>8×</span>
-        <span>10×</span>
-    </div>
-</div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let username = localStorage.getItem("username") || "User";
-        let balance = localStorage.getItem("userBalance") || "2.5 BTC";
-        document.getElementById("user-name").textContent = username;
-        document.getElementById("user-balance").textContent = balance;
-    });
-    function copyAddress() {
-        let address = document.getElementById("btc-address").textContent;
-        navigator.clipboard.writeText(address);
-        alert("Bitcoin Address Copied!");
-    }
-    function toggleSidebar() {
-        let sidebar = document.getElementById("sidebar");
-        if (sidebar.style.left === "0px") {
-            sidebar.style.left = "-250px";
-        } else {
-            sidebar.style.left = "0px";
-        }
-    }
-</script>
-
 </body>
 </html>
