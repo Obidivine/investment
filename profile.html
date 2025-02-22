@@ -12,6 +12,7 @@
             background-color: #121212;
             color: #fff;
             text-align: center;
+            transition: background 0.5s ease-in-out;
         }
         .loader-wrapper {
             position: fixed;
@@ -43,35 +44,38 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
         }
-        .nav-info {
+        nav {
             display: flex;
             align-items: center;
         }
-        .nav-info span {
-            margin-right: 15px;
-            font-weight: bold;
+        nav h1 {
+            margin: 0;
+        }
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: #222;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-menu ul li {
+            margin: 10px 0;
+        }
+        .nav-menu ul li a {
+            color: #f39c12;
+            text-decoration: none;
         }
         .menu-icon {
-            font-size: 24px;
             cursor: pointer;
-        }
-        .side-nav {
-            position: fixed;
-            top: 0;
-            right: -250px;
-            width: 250px;
-            height: 100%;
-            background: #333;
-            padding: 20px;
-            transition: 0.3s;
-        }
-        .side-nav a {
-            display: block;
-            color: #f39c12;
-            margin-bottom: 10px;
-            text-decoration: none;
+            font-size: 24px;
+            margin-left: 20px;
         }
         .profile-container {
             margin-top: 50px;
@@ -81,6 +85,10 @@
             margin-left: auto;
             margin-right: auto;
             border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .profile-container:hover {
+            transform: scale(1.05);
         }
         .btn {
             display: inline-block;
@@ -105,32 +113,27 @@
     <div class="loader-wrapper" id="loader-wrapper">
         <div class="loader"></div>
     </div><header>
-    <div class="nav-info">
-        <span id="user-name"></span>
-        <span id="btc-address"></span>
+    <nav>
+        <h1>CryptoInvest</h1>
+        <span id="user-name"></span> | <span id="btc-address"></span>
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+    </nav>
+    <div class="nav-menu" id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="fund.html">Fund Account</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+        </ul>
     </div>
-    <div class="menu-icon" onclick="toggleNav()">&#9776;</div>
 </header>
-
-<div class="side-nav" id="side-nav">
-    <a href="index.html">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="fund.html">Fund Account</a>
-    <a href="how-it-works.html">How It Works</a>
-</div>
 
 <section class="profile-container">
     <h2>User Profile</h2>
-    <p>Username: <span id="user-name-display"></span></p>
-    <p>Bitcoin Address: <span id="btc-address-display"></span></p>
+    <p>Username: <span id="user-name"></span></p>
+    <p>Bitcoin Address: <span id="btc-address"></span></p>
     <p>Balance: <span id="user-balance">2.5 BTC</span></p>
-    <h3>Recent Transactions</h3>
-    <ul>
-        <li>+0.5 BTC (Deposit) - 2025-02-20</li>
-        <li>-0.2 BTC (Withdrawal) - 2025-02-18</li>
-        <li>+1.0 BTC (Investment Return) - 2025-02-15</li>
-    </ul>
     <button class="btn" onclick="location.href='fund.html'">Fund Account</button>
     <button class="btn" onclick="location.href='how-it-works.html'">How It Works</button>
 </section>
@@ -149,16 +152,14 @@
         }, 1000);
         
         let username = localStorage.getItem("username") || "User";
-        let btcAddress = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
+        let btcAddress = localStorage.getItem("btcAddress") || "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
         document.getElementById("user-name").textContent = username;
         document.getElementById("btc-address").textContent = btcAddress;
-        document.getElementById("user-name-display").textContent = username;
-        document.getElementById("btc-address-display").textContent = btcAddress;
     });
-
-    function toggleNav() {
-        let nav = document.getElementById("side-nav");
-        nav.style.right = nav.style.right === "0px" ? "-250px" : "0px";
+    
+    function toggleMenu() {
+        let menu = document.getElementById("nav-menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
 </script>
 
