@@ -1,0 +1,93 @@
+body {
+    background: url('https://i.postimg.cc/L51fdrz6/wp13108709.jpg') no-repeat center center/cover;
+    filter: brightness(50%);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.profile-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-decoration: underline;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btc-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#copy-btn {
+    padding: 5px 10px;
+    background: gray;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#copy-btn:hover {
+    background: lightgray;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    background: #c78c19;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e0a62c;
+}
+
+.progress-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: gold;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5px auto;
+}
