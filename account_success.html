@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success - CryptoInvest</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+        }
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        .loader {
+            border: 5px solid #fff;
+            border-top: 5px solid #f39c12;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        header {
+            padding: 20px;
+            background: #222;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+        .success-container {
+            margin-top: 50px;
+            padding: 20px;
+            background: #222;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #f39c12;
+            color: #121212;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            padding: 20px;
+            background: #222;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader"></div>
+    </div><header>
+    <nav>
+        <h1>CryptoInvest</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="success-container">
+    <h2>Welcome, <span id="user-name"></span>!</h2>
+    <p>Your account has been successfully created.</p>
+    <button class="btn" onclick="proceedToProfile()">Go to Profile</button>
+</section>
+
+<footer>
+    <p>&copy; 2025 CryptoInvest. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(() => {
+            document.getElementById("loader-wrapper").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("loader-wrapper").style.display = "none";
+            }, 500);
+        }, 1000);
+        
+        let username = localStorage.getItem("username") || "User";
+        document.getElementById("user-name").textContent = username;
+    });
+
+    function proceedToProfile() {
+        document.getElementById("loader-wrapper").style.display = "flex";
+        setTimeout(() => {
+            window.location.href = "profile.html";
+        }, 1000);
+    }
+</script>
+
+</body>
+</html>

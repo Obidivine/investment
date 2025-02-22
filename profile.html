@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - CryptoInvest</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+        }
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        .loader {
+            border: 5px solid #fff;
+            border-top: 5px solid #f39c12;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        header {
+            padding: 20px;
+            background: #222;
+            text-align: center;
+        }
+        .banner {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #f39c12;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+        .profile-container {
+            margin-top: 50px;
+            padding: 20px;
+            background: #222;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #f39c12;
+            color: #121212;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            padding: 20px;
+            background: #222;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader"></div>
+    </div><header>
+    <h1>CryptoInvest</h1>
+    <div class="banner">
+        <p>Welcome, <span id="user-name"></span></p>
+        <p>Bitcoin Address: <span id="btc-address"></span></p>
+    </div>
+</header>
+
+<section class="profile-container">
+    <h2>User Profile</h2>
+    <p>Username: <span id="user-name"></span></p>
+    <p>Balance: <span id="user-balance">2.5 BTC</span></p>
+    <h3>Recent Transactions</h3>
+    <ul>
+        <li>+0.5 BTC (Deposit) - 2025-02-20</li>
+        <li>-0.2 BTC (Withdrawal) - 2025-02-18</li>
+        <li>+1.0 BTC (Investment Return) - 2025-02-15</li>
+    </ul>
+    <button class="btn" onclick="location.href='fund_account.html'">Fund Account</button>
+    <button class="btn" onclick="location.href='how_it_works.html'">How It Works</button>
+</section>
+
+<footer>
+    <p>&copy; 2025 CryptoInvest. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(() => {
+            document.getElementById("loader-wrapper").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("loader-wrapper").style.display = "none";
+            }, 500);
+        }, 1000);
+        
+        let username = localStorage.getItem("username") || "User";
+        let btcAddress = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"; // Example BTC Address
+        document.getElementById("user-name").textContent = username;
+        document.getElementById("btc-address").textContent = btcAddress;
+    });
+</script>
+
+</body>
+</html>
