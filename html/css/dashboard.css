@@ -16,9 +16,17 @@ nav ul li a { color: #ffffff; text-decoration: none; }
 
 .profile img { width: 40px; height: 40px; border-radius: 50%; }
 
-.overview, .portfolio, .market, .maket { padding: 20px; background-color: #1f1f1f; margin: 20px; border-radius: 10px; }
+#menu-icon { cursor: pointer; font-size: 24px; }
+
+#nav-menu { display: none; background-color: #1f1f1f; position: absolute; top: 50px; right: 20px; padding: 10px; border-radius: 5px; }
+
+#nav-menu.active { display: block; }
+
+.overview, .portfolio, .market, .help-section { padding: 20px; background-color: #1f1f1f; margin: 20px; border-radius: 10px; }
 
 button { background-color: #ff9800; color: white; border: none; padding: 10px 20px; cursor: pointer; margin-right: 10px; border-radius: 5px; font-size: 16px; }
 
 button:hover { background-color: #e68900; }
+
+footer { text-align: center; padding: 15px; background-color: #1f1f1f; margin-top: 20px; }
 
