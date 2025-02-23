@@ -3,50 +3,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <header>
         <div class="nav-container">
             <h1>Crypto Investment</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Wallet</a></li>
-                    <li><a href="#">Transactions</a></li>
-                    <li><a href="#">Settings</a></li>
-                </ul>
-            </nav>
-            <div class="profile">
-                <span id="username"></span>
-                <span id="btc-address"></span>
-                <img src="https://i.postimg.cc/1t4465ZX/images-5.png" alt="Profile">
-            </div>
         </div>
-    </header><main>
+        <div class="profile">
+            <span id="username">User</span>
+            <span id="btc-address">Bitcoin Address</span>
+            <img src="profile.png" alt="Profile">
+            <span id="menu-icon">☰</span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="wallet.html">Wallet</a></li>
+                <li><a href="fund.html">Fund Account</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
     <section class="overview">
         <h2>Account Overview</h2>
-        <div class="balance">Total Balance: <span id="balance">$0.00</span></div>
-        <button id="deposit">Deposit</button>
+        <p>Username: <span id="username-display"></span></p>
+        <p>Bitcoin Address: <span id="btc-address-display"></span></p>
+        <p>Balance: <span id="balance"></span></p>
+        <button id="deposit">Fund Account</button>
         <button id="withdraw">Withdraw</button>
+        <button id="view-profile">View Profile</button>
     </section>
-
     <section class="portfolio">
         <h2>Asset Portfolio</h2>
         <canvas id="portfolioChart"></canvas>
     </section>
-
     <section class="market">
         <h2>Market Trends</h2>
-        <div class="market-data">
-            <!-- Dynamic market trends will be inserted here -->
-        </div>
+        <div class="market-data"></div>
     </section>
-
-</main>
-
-<script src="js/dashboard.js"></script>
-
+    <section class="help-section">
+        <h2>Need Help?</h2>
+        <p>Learn how our investment platform works and how you can maximize your returns.</p>
+        <button id="help-button">How It Works</button>
+    </section>
+    <footer>
+        <p>&copy; 2025 Crypto Investment Platform</p>
+    </footer>
+    <script src="dashboard.js"></script>
 </body>
 </html>
