@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         new Chart(ctx, {
             type: "pie", // Pie chart type
             data: {
-                labels: ["Bitcoin", "Ethereum", "USDT", "BNB"],
+                labels: ["Bitcoin-60%", "Ethereum-25%", "USDT-10%", "BNB-5%"],
                 datasets: [{
                     data: [60, 25, 10, 5], // Example allocation in percentage
                     backgroundColor: ["#f7931a", "#3c3c3d", "#26a17b", "#f3ba2f"]
