@@ -30,3 +30,8 @@ button:hover { background-color: #e68900; }
 
 footer { text-align: center; padding: 15px; background-color: #1f1f1f; margin-top: 20px; }
 
+.img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;}
+
