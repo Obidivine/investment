@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <header>
@@ -13,7 +13,7 @@
         <div class="profile">
             <span id="username">User</span>
             <span id="btc-address">Bitcoin Address</span>
-            <img src="https://i.postimg.cc/1t4465ZX/images-5.png" alt="Profile">
+            <img src="profile.png" alt="Profile">
             <span id="menu-icon">☰</span>
         </div>
         <nav id="nav-menu">
@@ -29,24 +29,20 @@
     <section class="overview">
         <h2>Account Overview</h2>
         <p>Username: <span id="username-display"></span></p>
-        <p>Bitcoin Address: <h3> 3455677755EDFF</h3> <span id="btc-address-display"></span></p>
+        <p>Bitcoin Address: <span id="btc-address-display"></span></p>
         <p>Balance: <span id="balance"></span></p>
-        <button id="deposit">Fund Account</button> </br></br>
-        <button id="withdraw">Withdraw</button></br></br>
-        <button id="profile">View Profile</button></br></br>
+        <button id="deposit">Fund Account</button>
+        <button id="withdraw">Withdraw</button>
+        <button id="view-profile">View Profile</button>
     </section>
     <section class="portfolio">
         <h2>Asset Portfolio</h2>
         <canvas id="portfolioChart"></canvas>
-
     </section>
     <section class="market">
         <h2>Market Trends</h2>
-<div class="pics">
-<img src ="https://i.postimg.cc/MGKFH3FY/Primary-Image-how-to-buy-and-sell-bitcoin-options-7378233-bd2a484188b6473eb92cdc890bfd5673.jpg" alt="pics" ></div>
- <div class="market-data"></div>
+        <div class="market-data"></div>
     </section>
-
     <section class="help-section">
         <h2>Need Help?</h2>
         <p>Learn how our investment platform works and how you can maximize your returns.</p>
@@ -55,18 +51,6 @@
     <footer>
         <p>&copy; 2025 Crypto Investment Platform</p>
     </footer>
-    <script src="js/dashboard.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js">
-const ctx = document.getElementById("portfolioChart").getContext("2d");
-new Chart(ctx, {
-    type: "pie",
-    data: {
-        labels: ["Bitcoin", "Ethereum", "USDT"],
-        datasets: [{
-            data: [60, 30, 10],
-            backgroundColor: ["#f7931a", "#3c3c3d", "#26a17b"]
-        }]
-    }
-});</script>
+    <script src="dashboard.js"></script>
 </body>
 </html>
