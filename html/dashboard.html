@@ -45,6 +45,12 @@
 </main>
 
 <script src="js/dashboard.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const username = localStorage.getItem("username") || "User";
+        document.getElementById("username").textContent = username;
+    });
+</script>
 
 </body>
 </html>
