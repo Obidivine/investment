@@ -20,6 +20,7 @@
             </nav>
             <div class="profile">
                 <span id="username"></span>
+                <span id="btc-address"></span>
                 <img src="images/profile-icon.png" alt="Profile">
             </div>
         </div>
@@ -45,12 +46,6 @@
 </main>
 
 <script src="js/dashboard.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const username = localStorage.getItem("username") || "User";
-        document.getElementById("username").textContent = username;
-    });
-</script>
 
 </body>
 </html>
