@@ -1,0 +1,24 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #121212; color: #ffffff; }
+
+header { background-color: #1f1f1f; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+
+.nav-container h1 { margin: 0; font-size: 24px; text-decoration: underline; }
+
+nav ul { list-style: none; padding: 0; display: flex; }
+
+nav ul li { margin: 0 15px; }
+
+nav ul li a { color: #ffffff; text-decoration: none; }
+
+.profile { display: flex; align-items: center; }
+
+.profile span { margin-right: 10px; font-weight: bold; }
+
+.profile img { width: 40px; height: 40px; border-radius: 50%; }
+
+.overview, .portfolio, .market { padding: 20px; background-color: #1f1f1f; margin: 20px; border-radius: 10px; }
+
+button { background-color: #ff9800; color: white; border: none; padding: 10px 20px; cursor: pointer; margin-right: 10px; border-radius: 5px; font-size: 16px; }
+
+button:hover { background-color: #e68900; }
+
