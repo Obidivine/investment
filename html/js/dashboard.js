@@ -43,3 +43,14 @@ if (helpButton) {
 
 });
 
+const ctx = document.getElementById("portfolioChart").getContext("2d");
+new Chart(ctx, {
+    type: "pie",
+    data: {
+        labels: ["Bitcoin", "Ethereum", "USDT"],
+        datasets: [{
+            data: [60, 30, 10],
+            backgroundColor: ["#f7931a", "#3c3c3d", "#26a17b"]
+        }]
+    }
+});
