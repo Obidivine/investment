@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>Crypto Investment</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Wallet</a></li>
+                    <li><a href="#">Transactions</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="profile">
+                <span id="username"></span>
+                <img src="images/profile-icon.png" alt="Profile">
+            </div>
+        </div>
+    </header><main>
+    <section class="overview">
+        <h2>Account Overview</h2>
+        <div class="balance">Total Balance: <span id="balance">$0.00</span></div>
+        <button id="deposit">Deposit</button>
+        <button id="withdraw">Withdraw</button>
+    </section>
+
+    <section class="portfolio">
+        <h2>Asset Portfolio</h2>
+        <canvas id="portfolioChart"></canvas>
+    </section>
+
+    <section class="market">
+        <h2>Market Trends</h2>
+        <div class="market-data">
+            <!-- Dynamic market trends will be inserted here -->
+        </div>
+    </section>
+</main>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
