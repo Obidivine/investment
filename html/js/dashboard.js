@@ -23,8 +23,8 @@ document.getElementById("menu-icon").addEventListener("click", function () {
 function updateMarketData() {
     const marketData = document.querySelector(".market-data");
     marketData.innerHTML = `
-        <p>BTC/USD: $${(50000 + Math.random() * 5000).toFixed(2)}</p>
-        <p>BTC/AUD: $${(70000 + Math.random() * 5000).toFixed(2)}</p>
+        <p>BTC/USD: $${(50000 + Math.random() * 5000).toFixed(2)} +53%</p>
+        <p>BTC/AUD: $${(70000 + Math.random() * 5000).toFixed(2)} +40%</p>
         <p>BTC/XAU: $${(900 + Math.random() * 50).toFixed(2)}</p>
         <p>USD/AUD: $${(1.3 + Math.random() * 0.1).toFixed(2)}</p>
         <p>AUD/USD: $${(0.75 + Math.random() * 0.05).toFixed(2)}</p>
