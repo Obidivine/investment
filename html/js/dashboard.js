@@ -22,11 +22,3 @@ setInterval(updateMarketData, 3000);
 
 });
 
-function updateMarketData() {
-    const marketData = document.querySelector(".market-data");
-    marketData.innerHTML = `<p>BTC/AUD: $${(50000 + Math.random() * 5000).toFixed(2)}</p>`;
-}
-
-setInterval(updateMarketData, 3000);
-
-});
