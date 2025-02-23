@@ -12,7 +12,7 @@ loginForm.addEventListener("submit", function (event) {
     }
 
     localStorage.setItem("username", username);
-    window.location.href = "dashboard.html";
+    window.location.href = "account_success.html";
 });
 
 });
