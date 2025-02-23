@@ -1,93 +1,21 @@
-body {
-    background: url('https://i.postimg.cc/L51fdrz6/wp13108709.jpg') no-repeat center center/cover;
-    filter: brightness(50%);
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    color: white;
-}
+/* Reset default margin and padding */
 
-.profile-container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
 
-h1 {
-    text-decoration: underline;
-    font-size: 24px;
-    font-weight: bold;
-}
 
-.btc-address {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
+/* Body Styling */ body { background-color: #0d1117; color: #ffffff; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
 
-#copy-btn {
-    padding: 5px 10px;
-    background: gray;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
+/* Header Styling */ header { width: 100%; padding: 20px; background-color: #161b22; text-align: center; font-size: 24px; font-weight: bold; }
 
-#copy-btn:hover {
-    background: lightgray;
-}
+/* Welcome Section */ .welcome-section { margin-top: 50px; padding: 20px; }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
+.welcome-section h1 { font-size: 36px; margin-bottom: 20px; }
 
-.btn {
-    background: #c78c19;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    transition: 0.3s;
-}
+.welcome-section p { font-size: 18px; margin-bottom: 30px; }
 
-.btn:hover {
-    background: #e0a62c;
-}
+/* Button Styling */ .btn { padding: 10px 20px; background-color: #facc15; color: #000; font-size: 18px; text-decoration: none; border-radius: 5px; transition: 0.3s; }
 
-.progress-container {
-    margin-top: 20px;
-    text-align: center;
-}
+.btn:hover { background-color: #fcd34d; }
 
-.progress-bar {
-    width: 80%;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    margin: 0 auto;
-    overflow: hidden;
-}
+/* Footer Styling */ footer { position: absolute; bottom: 10px; text-align: center; width: 100%; padding: 10px; background-color: #161b22; }
 
-.progress {
-    height: 100%;
-    background: gold;
-}
-
-.progress-labels {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 5px auto;
-}
