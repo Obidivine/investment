@@ -16,7 +16,6 @@ document.getElementById("withdraw").addEventListener("click", function () {
 function updateMarketData() {
     const marketData = document.querySelector(".market-data");
     marketData.innerHTML = `<p>BTC/USD: $${(50000 + Math.random() * 5000).toFixed(2)}</p>`;
-    marketData.innerHTML = `<p>BTC/AUD: $${(50000 + Math.random() * 4000).toFixed(2)}</p>`;
 }
 
 setInterval(updateMarketData, 3000);
